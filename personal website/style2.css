@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202c39;
+    overflow: hidden;
+    
+}
+.container{
+    font-size:10px;
+    width:max-content;
+    height: 0em;
+    position: relative;
+}
+
+.sun{
+position: absolute;
+top: 15em;
+Left: 15em;
+height:10em;
+width: 10em;
+background-color: 
+yellow;
+border-radius: 50%;
+box-shadow: 0 0 3em whitesmoke, 0 0 6em rgb(221, 172, 80), 0 0 9em rgb(180, 142, 73);
+}
+
+.earth,.moon{
+    position: absolute;
+    border-style: solid;
+    border-color: transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+
+    
+}   
+
+.earth {
+    top: 5em;
+    Left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 3.65s Linear infinite;
+}
+
+.moon{
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: orbit 0.3s Linear infinite;
+}
+.mars{
+    top: 5em;
+    Left: 5em;
+    width: 45em;
+    height: 45em;
+    animation: orbit 6.87s Linear infinite;
+}
+.jupiter{
+    top: 15em;
+    Left: 15em;
+    width: 40em;
+    height: 40em;
+    animation: orbit 13s Linear infinite;
+}
+.saturn{
+    top: 10em;
+    Left: 10em;
+    width: 40em;
+    height: 40em;
+    animation: orbit 16s Linear infinite;
+}
+.uranus{
+    top: -40em;
+    Left: -40em;
+    width: 50em;
+    height: 50em;
+    animation: orbit 20s Linear infinite;
+
+}
+
+.earth::before,
+.moon::before,
+.mars::before,
+.jupiter::before,
+.saturn::before,
+.uranus::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+
+}
+.earth::before{
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+    box-shadow: 0 0 3em  rgb(130, 226, 194)
+    
+}
+.moon::before{
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: grey;
+
+
+}
+.mars::before{
+    top: 2.8em;
+    right: 2.8em;
+    width:2em;
+    height: 2em;
+    background-color: rgb(183, 122, 30);
+}
+.jupiter::before{
+    top:-80em;
+    right: -40em;
+    width:6em;
+    height: 6em;
+    background-color: rgb(205, 144, 90);
+}
+.saturn::before{
+    top:-200em;
+    right:-90em;
+    width:5em;
+    height: 5em;
+    background-color:rgb(179, 156, 136);
+}
+.uranus::before{
+    top: 2.8em;
+    right:2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(142, 142, 191);
+}
+
+@keyframes orbit{
+    to{
+        transform: rotate(360deg);}
+    }
+
